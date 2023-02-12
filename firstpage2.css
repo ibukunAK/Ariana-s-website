@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans serif';
+}
+html,
+header{
+    background: rgb(80, 10, 79);
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 15%;
+    /* background: rgb(46, 7, 52); */
+    display: flex;
+    position: fixed;
+}
+
+nav ul{
+    /* width: 100%; */
+    right: 15%;
+    position: absolute;
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    /* width: fit-content; */
+    /* height: 20%; */
+    color: #fff;
+    border-right: 1px solid rgb(251, 250, 250);
+    border-left: 1px solid rgb(252, 253, 251) ;
+    /* margin-left: 100px; */
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+nav ul li a{
+    /* padding: 0 40px; */
+    /* color: black; */
+    /* text-decoration: underline; */
+    /* background: rgb(250, 38, 250); */
+}
+
+.bi-house-door-fill{
+    /* color: red; */
+}
+
+.bi-envelope-fill{
+    /* color: blue; */
+}
+
+.bi-telephone-inbound-fill{
+    /* color: yellow; */
+}
+
+.bi-chat-dots-fill{
+    /* color: rgb(249, 152, 240); */
+}
+
+nav ul li a{
+    width: 30px;
+    font-size: 20px;
+    color: rgb(253, 251, 251);
+    text-decoration: none;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    width: 100%;
+    height: 90vh;
+    background-image: url(./images/pinktwo.JPG);
+    background-repeat: no-repeat;
+    background-position: top;
+    /* opacity: 0.5; */
+}
+
+.display{
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+.display ul{
+    display: flex;
+    
+}
+.display ul li{
+    background: #fff;
+    padding: 5% 20%;
+    list-style-type: none;
+    margin-left: 15%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+    
+}
+.display ul li a{
+    text-decoration: none;
+    color: #ffff;
+}
+.display ul li .icon a{
+    color: black;
+}
+.display ul .icon{
+    background: rgb(212, 211, 211);
+    padding: 35% 62%;
+    margin-top: -50px;
+    margin-left: -5px;
+    color: black;
+    width: 50%;
+    border: 3px solid;
+    border-radius: 50%;
+}
+.display ul .icon .fa-photo-film:hover{
+    color:rgb(20, 133, 193);
+}
+.display ul .icon .fa-film:hover{
+    color: rgb(114, 12, 55);
+}
+.display ul .icon .fa-school:hover{
+    color: rgb(241, 54, 48);
+}
+.display ul .icon .fa-heart:hover{
+    color: rgb(244, 76, 119);
+}
+
+.fa-photo-film{
+    /* position: absolute; */
+    margin-left: -10px;
+}
+.fa-film{
+    margin-left: -8px;
+    padding-top: 5px;
+}
+.fa-school{
+    margin-left: -10px;
+}
+.fa-heart{
+    margin-left: -10px;
+}
+.display ul li:first-child{
+    background: rgb(20, 133, 193);
+    
+}
+.display ul li:last-child{    
+    background: rgb(244, 73, 119);
+}
+.display ul li:nth-child(2){
+    background: rgb(152, 20, 75);
+}
+.display ul li:nth-child(3){
+    background: rgb(241, 54, 48);
+}
+.display ul li:first-child:hover{
+    background: rgb(15, 114, 167);
+}
+.display ul li:last-child:hover{
+    background: rgb(217, 58, 95);
+}
+.display ul li:nth-child(2):hover{
+    background: rgb(136, 14, 67);
+}
+.display ul li:nth-child(3):hover{
+    background: rgb(213, 44, 38);
+}
+
+.text{
+    background: rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    pointer-events: none;
+    color: #fff;
+    position: absolute;
+    left: 3%;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 2%;
+    top: 20%;
+    font-size: 20px;
+    font-family: monospace;
+    width: 50%;
+    line-height: 35px;
+}
+.text span{
+    padding-top: 5px;
+    font-size: 12px;
+}
+.text p{
+    font-family: cursive;
+}
+.container .warning {
+    font-size: 12px;
+    border-radius: 10px;
+}
+.container i span{
+    /* border-radius: 3px; */
+    padding: 2px;
+    background: red;
+    animation: flicker 0.5s ease-in-out infinite;
+}
+@keyframes flicker {
+    0%{
+        background: none;
+    }
+    100%{
+        background: red;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+    body{
+        width: 100%;
+        height: 100%;
+
+    }
+    
+    header{
+        width: 100%;
+        /* position: fixed; */
+
+    }
+    nav ul{
+        /* position: absolute; */
+        margin-left: 5%;
+        width: 100%;
+        display: block;
+        /* position: absolute; */
+    }
+    nav ul li{
+        /* width: 100%; */
+        border:none;
+        font-size: 10px;
+        padding: 10px 0 0 25px;
+        /* position: absolute; */
+    }
+    nav ul li a{
+        padding-right: 50px;
+    }
+
+
+
+   .container{
+    /* position: absolute; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* background-image: url(./images/pink-img.JPG); */
+    background-position: top;
+
+   } 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans serif';
+}
+html,
+header{
+    background: rgb(80, 10, 79);
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 15%;
+    /* background: rgb(46, 7, 52); */
+    display: flex;
+    position: fixed;
+}
+
+nav ul{
+    /* width: 100%; */
+    right: 15%;
+    position: absolute;
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    /* width: fit-content; */
+    /* height: 20%; */
+    color: #fff;
+    border-right: 1px solid rgb(251, 250, 250);
+    border-left: 1px solid rgb(252, 253, 251) ;
+    /* margin-left: 100px; */
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+nav ul li a{
+    /* padding: 0 40px; */
+    /* color: black; */
+    /* text-decoration: underline; */
+    /* background: rgb(250, 38, 250); */
+}
+
+.bi-house-door-fill{
+    /* color: red; */
+}
+
+.bi-envelope-fill{
+    /* color: blue; */
+}
+
+.bi-telephone-inbound-fill{
+    /* color: yellow; */
+}
+
+.bi-chat-dots-fill{
+    /* color: rgb(249, 152, 240); */
+}
+
+nav ul li a{
+    width: 30px;
+    font-size: 20px;
+    color: rgb(253, 251, 251);
+    text-decoration: none;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+.container{
+    position: absolute;
+    top: 15%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #fff;
+}
+
+input{
+   display: none;
+}
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+h1::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite ;
+}
+
+@keyframes animate {
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+    
+}
+
+.top-content{
+    background-color: rgb(243, 243, 243);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+h3{
+    height: 100%;
+    background-color: rgb(221, 221, 221);
+    line-height: 60px;
+    color: #fff;
+    padding: 0 50px;
+    
+}
+label{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px ;
+    font-size: 18px;
+    color: grey;
+    cursor: pointer;
+    transition: color 0.5s;
+          
+}
+label:hover{
+    color: black;
+}
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.pic{
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+    transition: .5s;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+#check1:checked ~ .container .photo-gallery .pic{
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .container .photo-gallery .birth{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#check2:checked ~ .container .photo-gallery .first,
+#check2:checked ~ .container .photo-gallery .half{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+
+}
+
+#check3:checked ~ .container .photo-gallery .first{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    transition: .5s;
+}
+#check3:checked ~ .container .photo-gallery .birth,
+#check3:checked ~ .container .photo-gallery .half{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;
+
+}
+#check4:checked ~ .container .photo-gallery .half{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+    /* transition: 0.5s; */
+}
+#check4:checked ~ .container .photo-gallery .birth,
+#check4:checked ~ .container .photo-gallery .first{
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: 0s;  
+
+}
